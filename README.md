@@ -3,5 +3,5 @@
 3. Run command - php artisan config:cache
 4. Run command - php artisan migrate
 5. Run command - php artisan serve
-6. Click on the given link
+6. After run the above command,click on the given link
 7. To view the frond end, add '/user_feeds' to the given link
