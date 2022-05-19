@@ -46,6 +46,15 @@
                                             </tr>
                                             @endforeach
                                            @endif
+                                           @if(!$user_logout->isEmpty())
+                                            @foreach($user_logout as $key => $value)
+                                            <tr>
+                                                {{-- <td class="text-center">{{ $value->id }}</td> --}}
+                                                <td class="text-center">{{ ucwords($value->name) }} logout at {{ \Carbon\Carbon::createFromTimestamp(strtotime($value->last_logout))->format('d-m-Y h:i A')}}</td>
+                                               
+                                            </tr>
+                                            @endforeach
+                                           @endif
                                            @if(!$user_messages->isEmpty())
                                             @foreach($user_messages as $key => $values)
                                             <tr>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\UserMessages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -97,4 +98,15 @@ class HomeController extends Controller
         return redirect('/');
     
     }
+    // public function logout(Request $request) {
+    //     $id = Auth::id();
+    //     $result_data    =  User::where('id', $id)
+    //                         ->update(
+    //                         [
+    //                             'last_logout'          => date('Y-m-d H:i:s'), 
+    //                         ]
+    //                 );
+    //     Auth::logout();
+    //     return redirect('/');
+    //   }
 }

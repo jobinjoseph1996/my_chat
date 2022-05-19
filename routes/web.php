@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,5 +29,7 @@ Route::get('/home/{id}/edit', [App\Http\Controllers\HomeController::class, 'edit
 // Route::post('home/update', [App\Http\Controllers\HomeController::class, 'update'])->name('home.update');
 Route::post('home/update/{id}', [App\Http\Controllers\HomeController::class, 'update'])->name('home-update');
 Route::get('/home/{id}', [App\Http\Controllers\HomeController::class, 'destroy'])->name('home.destroy');
+// Route::get('logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
+// Route::get('logout', '\App\Http\Controllers\HomeController@logout');
 
 Route::get('user_feeds', [App\Http\Controllers\UserController::class, 'index'])->name('user_feeds');
